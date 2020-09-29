@@ -1,4 +1,4 @@
-﻿using EffortlessApi.SassyMQ.Lib;
+﻿using EffortlessAPI.SSio.SassyMQ;
 using Newtonsoft.Json;
 using System;
 using System.Threading;
@@ -19,7 +19,7 @@ namespace ConsoleApp1
             guest.ValidateTemporaryAccessToken(payload, (reply, bdea) =>
             {
                 if (!String.IsNullOrEmpty(reply.ErrorMessage)) throw new Exception("Invalid username/password");
-                var user = new SMQABSUser (amqps);
+                var user = new SMQSSioUser (amqps);
                 user.AccessToken = reply.AccessToken;
                 payload = user.CreatePayload();
 

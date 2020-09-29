@@ -4,7 +4,7 @@
   "CurrentPath": "",
   "SaveDisabled": false,
   "SSoTmeProjectId": "3c107f35-85eb-4847-8bbe-dcdc046b1f16",
-  "Name": "authorizersbysubscription",
+  "Name": "smartsubs",
   "ProjectSettings": [
     {
       "ProjectSettingId": "5e421284-8add-480d-bec1-8e84c1720b26",
@@ -42,19 +42,19 @@
       "Value": "YourProject.Lib.DataClasses"
     },
     {
-      "ProjectSettingId": "45903721-8494-471e-9520-162797f5d994",
-      "Name": "project-name",
-      "Value": "authorizersbysubscription"
-    },
-    {
       "ProjectSettingId": "b35056ac-52b4-4852-9403-2cae6ac1cdcf",
       "Name": "amqps",
-      "Value": "amqps://smqPublic:smqPublic@effortlessapi-rmq.ssot.me/ej-authorizersbysubscription"
+      "Value": "amqps://smqPublic:smqPublic@effortlessapi-rmq.ssot.me/smartsubs-io"
     },
     {
       "ProjectSettingId": "64c7eec4-d052-4f67-93ea-95392971b326",
       "Name": "dataclasses-namespace",
-      "Value": "authorizersbysubscription.Lib.DataClasses"
+      "Value": "SmartSubs.io.Lib.DataClasses"
+    },
+    {
+      "ProjectSettingId": "7fb40a4c-aca6-42ed-9716-e1b2fc86b544",
+      "Name": "project-name",
+      "Value": "smartsubs"
     }
   ],
   "ProjectTranspilers": [
@@ -77,8 +77,8 @@
       },
       "ProjectTranspilerId": "38069e8e-e468-468f-adb6-06cbfe211251",
       "Name": "SmqlToDotNetRabbitMQ",
-      "RelativePath": "/DotNet/DotNetClassLibrary/SassyMQ",
-      "CommandLine": "sassymq/smql-to-csharp-rabbitmq -i ../../../SassyMQ/Lexicon.smql -i ../../../ODXML/DataSchema.odxml -p smq-namespace=EffortlessAPI.ABS.SassyMQ"
+      "RelativePath": "/DotNet/SSio.DotNetClassLibrary/SassyMQ",
+      "CommandLine": "sassymq/smql-to-csharp-rabbitmq -i ../../../SassyMQ/Lexicon.smql -i ../../../ODXML/DataSchema.odxml -p smq-namespace=EffortlessAPI.SSio.SassyMQ"
     },
     {
       "MatchedTranspiler": {
@@ -88,8 +88,8 @@
       },
       "ProjectTranspilerId": "05446ed8-0087-433d-a28b-948e30bbc8da",
       "Name": "OdxmlToCSharpPOCOs",
-      "RelativePath": "/DotNet/DotNetClassLibrary/DataClasses",
-      "CommandLine": "odxml42/odxml-to-csharp-pocos -i ../../../ODXML/DataSchema.odxml -p airtable=true -p namespace=EffortlessAPI.ABS.DataClasses"
+      "RelativePath": "/DotNet/SSio.DotNetClassLibrary/DataClasses",
+      "CommandLine": "odxml42/odxml-to-csharp-pocos -i ../../../ODXML/DataSchema.odxml -p airtable=true -p namespace=EffortlessAPI.SSio.DataClasses"
     }
   ]
 }

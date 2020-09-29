@@ -1,4 +1,4 @@
-using EffortlessApi.SassyMQ.Lib;
+using EffortlessAPI.SSio.SassyMQ;
 using JWT.Algorithms;
 using JWT.Builder;
 using Newtonsoft.Json;
