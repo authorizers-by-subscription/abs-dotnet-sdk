@@ -6,5 +6,6 @@ namespace SmartSubs.io.Lib
     {
         String ErrorMessage { get; set; }
         String AccessToken { get; set; }
+        bool IsHandled { get; set; }
     }
 }

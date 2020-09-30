@@ -26,6 +26,8 @@ namespace EffortlessAPI.SSio.SassyMQ
     /// </summary>
     public abstract partial class SMQActorBase
     {
+        public static string C_AMQPS = "amqps://smqPublic:smqPublic@effortlessapi-rmq.ssot.me/ej-authorizersbysubscription";
+
         public IModel RMQChannel;
         public IConnection RMQConnection;
         protected ConnectionFactory RMQFactory;

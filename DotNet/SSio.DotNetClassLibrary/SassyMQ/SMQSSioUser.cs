@@ -11,8 +11,6 @@ namespace EffortlessAPI.SSio.SassyMQ
 {                   
     public partial class SMQSSioUser
     {
-        private static string C_AMQPS = "amqps://smqPublic:smqPublic@effortlessapi-rmq.ssot.me/ej-authorizersbysubscription";
-
         public static SMQSSioUser GetDemoABSUser(string emailAddress, string demoPassword)
         {
             var guest = new SMQGuest(C_AMQPS);

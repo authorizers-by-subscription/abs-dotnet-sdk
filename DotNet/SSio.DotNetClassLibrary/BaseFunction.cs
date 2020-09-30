@@ -30,6 +30,7 @@ namespace SmartSubs.io.Lib
                 if (body is null) body = "{}";
                 var appPayload = JsonConvert.DeserializeObject<T>(body);
                 payload = this.ExecuteFunction(appPayload, input, context);
+                payload.IsHandled = true;
                 Console.WriteLine(JsonConvert.SerializeObject(payload));
             }
             catch (Exception ex)
