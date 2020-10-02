@@ -8,7 +8,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using dc = SmartSubs.io.Lib.DataClasses;
 using System.Collections.Generic;
-using EffortlessAPI.SSio.ssio;
+
 
 namespace EffortlessAPI.SSio.SassyMQ
 {
@@ -37,7 +37,7 @@ namespace EffortlessAPI.SSio.SassyMQ
             this.Content = content;
         }
 
-        // 26 odxml properties
+        // 27 odxml properties
         
         public String BrandId { get; set; }
         
@@ -182,6 +182,12 @@ namespace EffortlessAPI.SSio.SassyMQ
         public dc.UnitOfMeasurement UnitOfMeasurement { get; set; }
         
         public List<dc.UnitOfMeasurement> UnitOfMeasurements { get; set; }
+        
+        public String ProductLicenseDMQueueId { get; set; }
+        
+        public dc.ProductLicenseDMQueue ProductLicenseDMQueue { get; set; }
+        
+        public List<dc.ProductLicenseDMQueue> ProductLicenseDMQueues { get; set; }
         
         public String MeasurementTypeId { get; set; }
         

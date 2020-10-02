@@ -205,6 +205,44 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String DefaultRenewalSKU { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand")]
+        [RemoteIsCollection]
+        public String NameForBrand { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrand")]
+        [RemoteIsCollection]
+        public String PluralNameForBrand { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrandLicense")]
+        [RemoteIsCollection]
+        public String PluralNameForBrandLicense { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrandLicense")]
+        [RemoteIsCollection]
+        public String NameForBrandLicense { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForMeter")]
+        public String NameForMeter { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForMeter")]
+        public String PluralNameForMeter { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForSKU")]
+        public String NameForSKU { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForSKU")]
+        public String PluralNameForSKU { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseEventWebhookUrl")]
+        [RemoteIsCollection]
+        public String BrandLicenseEventWebhookUrl { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "CustomLicenseEventWebhookUrl")]
+        public String CustomLicenseEventWebhookUrl { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseEventWebhookUrl")]
+        public String LicenseEventWebhookUrl { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenses_BrandsesExpanded")]
@@ -252,6 +290,12 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnology_ProductLicensesesExpanded")]
         public BindingList<ProductLicense> SSioTechnology_ProductLicensesExpanded { get; set; }
             
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorLicenseEvent_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> LicensorLicenseEvent_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseLicenseEventWebhookUrl_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> BrandLicenseLicenseEventWebhookUrl_ProductLicensesExpanded { get; set; }
+            
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseBundleName_LicenseMetersesExpanded")]
         public BindingList<LicenseMeter> LicenseBundleName_LicenseMetersExpanded { get; set; }
             
@@ -263,6 +307,30 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseSKU_LicenseMetersesExpanded")]
         public BindingList<LicenseMeter> BrandLicenseSKU_LicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand_LicenseMetersesExpanded")]
+        public BindingList<LicenseMeter> NameForBrand_LicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrand_LicenseMetersesExpanded")]
+        public BindingList<LicenseMeter> PluralNameForBrand_LicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrandLicense_LicenseMetersesExpanded")]
+        public BindingList<LicenseMeter> NameForBrandLicense_LicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrandLicense_LicenseMetersesExpanded")]
+        public BindingList<LicenseMeter> PluralNameForBrandLicense_LicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForMeter_LicenseMetersesExpanded")]
+        public BindingList<LicenseMeter> NameForMeter_LicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForMeter_LicenseMetersesExpanded")]
+        public BindingList<LicenseMeter> PluralNameForMeter_LicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForSKU_LicenseMetersesExpanded")]
+        public BindingList<LicenseMeter> NameForSKU_LicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForSKU_LicenseMetersesExpanded")]
+        public BindingList<LicenseMeter> PluralNameForSKU_LicenseMetersExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseBundles_LicenseTypesesExpanded")]
         public BindingList<LicenseType> LicenseBundles_LicenseTypesExpanded { get; set; }
@@ -323,6 +391,30 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseTypePrimaryTrackingField_LicenseSKUsesExpanded")]
         public BindingList<LicenseSKU> LicenseTypePrimaryTrackingField_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrand_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> PluralNameForBrand_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrandLicense_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> NameForBrandLicense_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrandLicense_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> PluralNameForBrandLicense_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForMeter_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> NameForMeter_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForMeter_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> PluralNameForMeter_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForSKU_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> NameForSKU_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForSKU_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> PluralNameForSKU_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> NameForBrand_LicenseSKUsExpanded { get; set; }
             
 
         

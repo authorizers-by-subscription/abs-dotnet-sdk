@@ -90,6 +90,17 @@
       "Name": "OdxmlToCSharpPOCOs",
       "RelativePath": "/DotNet/SSio.DotNetClassLibrary/DataClasses",
       "CommandLine": "odxml42/odxml-to-csharp-pocos -i ../../../ODXML/DataSchema.odxml -p airtable=true -p namespace=EffortlessAPI.SSio.DataClasses"
+    },
+    {
+      "MatchedTranspiler": {
+        "TranspilerId": "fd07c95f-4e1a-4f15-bb8c-51a01e365952",
+        "Name": "OdxmlToSMQAirtableCRUDHandler",
+        "Description": "Odxml To SMQAirtableCRUDHandler"
+      },
+      "ProjectTranspilerId": "cdf3eda5-24e8-4799-aef0-0b629b844c7e",
+      "Name": "OdxmlToSMQAirtableCRUDHandler",
+      "RelativePath": "/DotNet/SSio.DotNetClassLibrary/Airtable",
+      "CommandLine": "airtable/odxml-to-smq-airtable-crud-handler -i ../../../ODXML/DataSchema.odxml -p airtable-api-wrapper=SassyApiHostedCoreAirtableAPIWrapper -p actors=Guest,LicenseCoordinator,SSioUser,Admin,CRUDCoordinator -p crud-coordinator=CRUDCoordinator -p user-name=SSioUser -p smq-namespace=EffortlessAPI.SSio.SassyMQ"
     }
   ]
 }

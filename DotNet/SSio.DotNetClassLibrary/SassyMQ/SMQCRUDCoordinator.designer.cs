@@ -940,6 +940,38 @@ namespace EffortlessAPI.SSio.SassyMQ
                         this.OnAdminDeleteUnitOfMeasurementReceived(payload, bdea);
                         break;
                     
+                    case "crudcoordinator.crud.licensecoordinator.addproductlicensedmqueue":
+                        this.OnLicenseCoordinatorAddProductLicenseDMQueueReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.getproductlicensedmqueues":
+                        this.OnLicenseCoordinatorGetProductLicenseDMQueuesReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.updateproductlicensedmqueue":
+                        this.OnLicenseCoordinatorUpdateProductLicenseDMQueueReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.deleteproductlicensedmqueue":
+                        this.OnLicenseCoordinatorDeleteProductLicenseDMQueueReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.addproductlicensedmqueue":
+                        this.OnAdminAddProductLicenseDMQueueReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.getproductlicensedmqueues":
+                        this.OnAdminGetProductLicenseDMQueuesReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.updateproductlicensedmqueue":
+                        this.OnAdminUpdateProductLicenseDMQueueReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.deleteproductlicensedmqueue":
+                        this.OnAdminDeleteProductLicenseDMQueueReceived(payload, bdea);
+                        break;
+                    
                     case "crudcoordinator.crud.licensecoordinator.addmeasurementtype":
                         this.OnLicenseCoordinatorAddMeasurementTypeReceived(payload, bdea);
                         break;
@@ -4219,6 +4251,118 @@ namespace EffortlessAPI.SSio.SassyMQ
             {
                 plea.Payload.IsHandled = true;
                 this.AdminDeleteUnitOfMeasurementReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: AddProductLicenseDMQueue from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorAddProductLicenseDMQueueReceived;
+        protected virtual void OnLicenseCoordinatorAddProductLicenseDMQueueReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorAddProductLicenseDMQueueReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorAddProductLicenseDMQueueReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: GetProductLicenseDMQueues from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorGetProductLicenseDMQueuesReceived;
+        protected virtual void OnLicenseCoordinatorGetProductLicenseDMQueuesReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorGetProductLicenseDMQueuesReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorGetProductLicenseDMQueuesReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: UpdateProductLicenseDMQueue from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorUpdateProductLicenseDMQueueReceived;
+        protected virtual void OnLicenseCoordinatorUpdateProductLicenseDMQueueReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorUpdateProductLicenseDMQueueReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorUpdateProductLicenseDMQueueReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: DeleteProductLicenseDMQueue from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorDeleteProductLicenseDMQueueReceived;
+        protected virtual void OnLicenseCoordinatorDeleteProductLicenseDMQueueReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorDeleteProductLicenseDMQueueReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorDeleteProductLicenseDMQueueReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: AddProductLicenseDMQueue from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminAddProductLicenseDMQueueReceived;
+        protected virtual void OnAdminAddProductLicenseDMQueueReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminAddProductLicenseDMQueueReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminAddProductLicenseDMQueueReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: GetProductLicenseDMQueues from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminGetProductLicenseDMQueuesReceived;
+        protected virtual void OnAdminGetProductLicenseDMQueuesReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminGetProductLicenseDMQueuesReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminGetProductLicenseDMQueuesReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: UpdateProductLicenseDMQueue from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminUpdateProductLicenseDMQueueReceived;
+        protected virtual void OnAdminUpdateProductLicenseDMQueueReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminUpdateProductLicenseDMQueueReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminUpdateProductLicenseDMQueueReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: DeleteProductLicenseDMQueue from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminDeleteProductLicenseDMQueueReceived;
+        protected virtual void OnAdminDeleteProductLicenseDMQueueReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminDeleteProductLicenseDMQueueReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminDeleteProductLicenseDMQueueReceived(this, plea);
             }
         }
 

@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EffortlessAPI.ABS.SassyMQ
+namespace EffortlessAPI.SSio.SassyMQ
 {                   
     public partial class SMQCRUDCoordinator
     {

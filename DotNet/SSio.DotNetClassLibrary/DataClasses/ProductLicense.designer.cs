@@ -220,6 +220,24 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String DefaultSKUMeterAdjustments { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseDMQueue")]
+        [RemoteIsCollection]
+        public String[] ProductLicenseDMQueue { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorLicenseEvent")]
+        [RemoteIsCollection]
+        public String LicensorLicenseEvent { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseLicenseEventWebhookUrl")]
+        [RemoteIsCollection]
+        public String BrandLicenseLicenseEventWebhookUrl { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "CustomLicenseEventWebhookUrl")]
+        public String CustomLicenseEventWebhookUrl { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseEventWebhookUrl")]
+        public String LicenseEventWebhookUrl { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SubscriptionRenewalPrice_InvoiceLineItemsesExpanded")]
@@ -275,6 +293,9 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenses_LicenseSKUsesExpanded")]
         public BindingList<LicenseSKU> ProductLicenses_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseDMQueuesExpanded")]
+        public BindingList<ProductLicenseDMQueue> ProductLicenseDMQueuesExpanded { get; set; }
             
 
         

@@ -77,7 +77,7 @@ namespace SmartSubs.io.Lib.DataClasses
         public Nullable<decimal> Limit { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterRemaining")]
-        public Nullable<Int32> MeterRemaining { get; set; }
+        public Nullable<decimal> MeterRemaining { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterInWarning")]
         public Nullable<Int32> MeterInWarning { get; set; }
@@ -119,7 +119,7 @@ namespace SmartSubs.io.Lib.DataClasses
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ActiveMeterLimit")]
         [RemoteIsCollection]
-        public Nullable<Int32> ActiveMeterLimit { get; set; }
+        public Nullable<decimal> ActiveMeterLimit { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterSKU")]
         [RemoteIsCollection]
@@ -166,6 +166,33 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseMeterUnitOfMeasurementPlural")]
         [RemoteIsCollection]
         public String LicenseMeterUnitOfMeasurementPlural { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ActiveUsageValueRollup")]
+        [RemoteIsCollection]
+        public Nullable<decimal> ActiveUsageValueRollup { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ActiveUsageValueOffset")]
+        public Nullable<decimal> ActiveUsageValueOffset { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ActiveMeterUsage")]
+        public Nullable<decimal> ActiveMeterUsage { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TotalDaysMeasured")]
+        public Nullable<Int32> TotalDaysMeasured { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseMeterLimitDirection")]
+        [RemoteIsCollection]
+        public String LicenseMeterLimitDirection { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "CustomWarningPercent")]
+        public Nullable<decimal> CustomWarningPercent { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultMeterWarningPercent")]
+        [RemoteIsCollection]
+        public Nullable<decimal> DefaultMeterWarningPercent { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "WarningPercent")]
+        public Nullable<decimal> WarningPercent { get; set; }
     
 
         

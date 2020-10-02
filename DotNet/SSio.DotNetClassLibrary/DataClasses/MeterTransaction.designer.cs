@@ -42,7 +42,7 @@ namespace SmartSubs.io.Lib.DataClasses
         public String ProductLicenseMeter { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Value")]
-        public Nullable<Int32> Value { get; set; }
+        public Nullable<decimal> Value { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "CreatedTime")]
         public Nullable<DateTime> CreatedTime { get; set; }
@@ -127,6 +127,10 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String LicenseMeterUnitOfMeasurementPlural { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ReplacedByMeterTransaction")]
+        [RemoteIsCollection]
+        public String ReplacedByMeterTransaction { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterTransactions_UnitConversionsesExpanded")]
@@ -146,6 +150,12 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ActiveMeterLimit_ProductLicenseMetersesExpanded")]
         public BindingList<ProductLicenseMeter> ActiveMeterLimit_ProductLicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ActiveUsageValueRollup_ProductLicenseMetersesExpanded")]
+        public BindingList<ProductLicenseMeter> ActiveUsageValueRollup_ProductLicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ReplacedByMeterTransaction_MeterTransactionsesExpanded")]
+        public BindingList<MeterTransaction> ReplacedByMeterTransaction_MeterTransactionsExpanded { get; set; }
             
 
         

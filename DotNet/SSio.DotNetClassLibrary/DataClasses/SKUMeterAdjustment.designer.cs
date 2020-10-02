@@ -106,6 +106,10 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String LicenseMeterUnitOfMeasurement { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Meter")]
+        [RemoteIsCollection]
+        public String Meter { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SKULimit_ProductLicenseMetersesExpanded")]

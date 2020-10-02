@@ -225,6 +225,38 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String[] SKUMeterAdjustments { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrand")]
+        [RemoteIsCollection]
+        public String PluralNameForBrand { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrandLicense")]
+        [RemoteIsCollection]
+        public String NameForBrandLicense { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrandLicense")]
+        [RemoteIsCollection]
+        public String PluralNameForBrandLicense { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForMeter")]
+        [RemoteIsCollection]
+        public String NameForMeter { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForMeter")]
+        [RemoteIsCollection]
+        public String PluralNameForMeter { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForSKU")]
+        [RemoteIsCollection]
+        public String NameForSKU { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForSKU")]
+        [RemoteIsCollection]
+        public String PluralNameForSKU { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand")]
+        [RemoteIsCollection]
+        public String NameForBrand { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MonthlyFee_ProductLicensesesExpanded")]

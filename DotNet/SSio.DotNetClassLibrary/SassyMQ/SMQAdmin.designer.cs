@@ -2629,6 +2629,114 @@ namespace EffortlessAPI.SSio.SassyMQ
         
         
         /// <summary>
+        /// AddProductLicenseDMQueue - 
+        /// </summary>
+        public Task AddProductLicenseDMQueue(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.AddProductLicenseDMQueue(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
+        }
+
+        /// <summary>
+        /// AddProductLicenseDMQueue - 
+        /// </summary>
+        public Task AddProductLicenseDMQueue(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            var payload = this.CreatePayload(content);
+            return this.AddProductLicenseDMQueue(payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+    
+        
+        /// <summary>
+        /// AddProductLicenseDMQueue - 
+        /// </summary>
+        public Task AddProductLicenseDMQueue(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.SendMessage("crudcoordinator.crud.admin.addproductlicensedmqueue", payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+        
+        
+        /// <summary>
+        /// GetProductLicenseDMQueues - 
+        /// </summary>
+        public Task GetProductLicenseDMQueues(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.GetProductLicenseDMQueues(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
+        }
+
+        /// <summary>
+        /// GetProductLicenseDMQueues - 
+        /// </summary>
+        public Task GetProductLicenseDMQueues(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            var payload = this.CreatePayload(content);
+            return this.GetProductLicenseDMQueues(payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+    
+        
+        /// <summary>
+        /// GetProductLicenseDMQueues - 
+        /// </summary>
+        public Task GetProductLicenseDMQueues(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.SendMessage("crudcoordinator.crud.admin.getproductlicensedmqueues", payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+        
+        
+        /// <summary>
+        /// UpdateProductLicenseDMQueue - 
+        /// </summary>
+        public Task UpdateProductLicenseDMQueue(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.UpdateProductLicenseDMQueue(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
+        }
+
+        /// <summary>
+        /// UpdateProductLicenseDMQueue - 
+        /// </summary>
+        public Task UpdateProductLicenseDMQueue(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            var payload = this.CreatePayload(content);
+            return this.UpdateProductLicenseDMQueue(payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+    
+        
+        /// <summary>
+        /// UpdateProductLicenseDMQueue - 
+        /// </summary>
+        public Task UpdateProductLicenseDMQueue(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.SendMessage("crudcoordinator.crud.admin.updateproductlicensedmqueue", payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+        
+        
+        /// <summary>
+        /// DeleteProductLicenseDMQueue - 
+        /// </summary>
+        public Task DeleteProductLicenseDMQueue(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.DeleteProductLicenseDMQueue(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
+        }
+
+        /// <summary>
+        /// DeleteProductLicenseDMQueue - 
+        /// </summary>
+        public Task DeleteProductLicenseDMQueue(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            var payload = this.CreatePayload(content);
+            return this.DeleteProductLicenseDMQueue(payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+    
+        
+        /// <summary>
+        /// DeleteProductLicenseDMQueue - 
+        /// </summary>
+        public Task DeleteProductLicenseDMQueue(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.SendMessage("crudcoordinator.crud.admin.deleteproductlicensedmqueue", payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+        
+        
+        /// <summary>
         /// AddMeasurementType - 
         /// </summary>
         public Task AddMeasurementType(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)

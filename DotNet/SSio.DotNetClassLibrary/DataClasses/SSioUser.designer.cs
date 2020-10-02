@@ -135,6 +135,15 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String[] SSioTechnologies { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand")]
+        public String NameForBrand { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrand")]
+        public String PluralNameForBrand { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultLicenseEventWebhookUrl")]
+        public String DefaultLicenseEventWebhookUrl { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensor_BrandsesExpanded")]
@@ -160,6 +169,15 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "OwnerIsVerified_BrandsesExpanded")]
         public BindingList<Brand> OwnerIsVerified_BrandsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand_BrandsesExpanded")]
+        public BindingList<Brand> NameForBrand_BrandsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrand_BrandsesExpanded")]
+        public BindingList<Brand> PluralNameForBrand_BrandsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorLicenseEventWebhookUrl_BrandsesExpanded")]
+        public BindingList<Brand> LicensorLicenseEventWebhookUrl_BrandsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTOwner_SSioTechnologiesesExpanded")]
         public BindingList<SSioTechnology> SSioTOwner_SSioTechnologiesExpanded { get; set; }

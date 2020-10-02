@@ -149,6 +149,44 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String UnitOfMeasurementSingular { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LimitDirection")]
+        public String LimitDirection { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand")]
+        [RemoteIsCollection]
+        public String NameForBrand { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrand")]
+        [RemoteIsCollection]
+        public String PluralNameForBrand { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrandLicense")]
+        [RemoteIsCollection]
+        public String NameForBrandLicense { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrandLicense")]
+        [RemoteIsCollection]
+        public String PluralNameForBrandLicense { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForMeter")]
+        [RemoteIsCollection]
+        public String NameForMeter { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForMeter")]
+        [RemoteIsCollection]
+        public String PluralNameForMeter { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForSKU")]
+        [RemoteIsCollection]
+        public String NameForSKU { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForSKU")]
+        [RemoteIsCollection]
+        public String PluralNameForSKU { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultWarningPercent")]
+        public Nullable<decimal> DefaultWarningPercent { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterTypeSKUCode_SKUMeterAdjustmentsesExpanded")]
@@ -159,6 +197,9 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseMeterUnitOfMeasurement_SKUMeterAdjustmentsesExpanded")]
         public BindingList<SKUMeterAdjustment> LicenseMeterUnitOfMeasurement_SKUMeterAdjustmentsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Meter_SKUMeterAdjustmentsesExpanded")]
+        public BindingList<SKUMeterAdjustment> Meter_SKUMeterAdjustmentsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseMetersesExpanded")]
         public BindingList<ProductLicenseMeter> ProductLicenseMetersExpanded { get; set; }
@@ -183,6 +224,12 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseMeterUnitOfMeasurementPlural_ProductLicenseMetersesExpanded")]
         public BindingList<ProductLicenseMeter> LicenseMeterUnitOfMeasurementPlural_ProductLicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseMeterLimitDirection_ProductLicenseMetersesExpanded")]
+        public BindingList<ProductLicenseMeter> LicenseMeterLimitDirection_ProductLicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultMeterWarningPercent_ProductLicenseMetersesExpanded")]
+        public BindingList<ProductLicenseMeter> DefaultMeterWarningPercent_ProductLicenseMetersExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseMeters_BrandLicensesesExpanded")]
         public BindingList<BrandLicense> LicenseMeters_BrandLicensesExpanded { get; set; }

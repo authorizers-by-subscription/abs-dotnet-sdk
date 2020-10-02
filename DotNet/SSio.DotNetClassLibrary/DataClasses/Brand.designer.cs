@@ -141,6 +141,30 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String SSioTechnologyName { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrandLicense")]
+        public String NameForBrandLicense { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand")]
+        [RemoteIsCollection]
+        public String NameForBrand { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrand")]
+        [RemoteIsCollection]
+        public String PluralNameForBrand { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrandLicense")]
+        public String PluralNameForBrandLicense { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorLicenseEventWebhookUrl")]
+        [RemoteIsCollection]
+        public String LicensorLicenseEventWebhookUrl { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "CustomLicenseEventWebhookUrl")]
+        public String CustomLicenseEventWebhookUrl { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseEventWebhookUrl")]
+        public String LicenseEventWebhookUrl { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Brands_SSioTechnologiesesExpanded")]
@@ -208,6 +232,21 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnologyName_BrandLicensesesExpanded")]
         public BindingList<BrandLicense> SSioTechnologyName_BrandLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand_BrandLicensesesExpanded")]
+        public BindingList<BrandLicense> NameForBrand_BrandLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrand_BrandLicensesesExpanded")]
+        public BindingList<BrandLicense> PluralNameForBrand_BrandLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PluralNameForBrandLicense_BrandLicensesesExpanded")]
+        public BindingList<BrandLicense> PluralNameForBrandLicense_BrandLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrandLicense_BrandLicensesesExpanded")]
+        public BindingList<BrandLicense> NameForBrandLicense_BrandLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseEventWebhookUrl_BrandLicensesesExpanded")]
+        public BindingList<BrandLicense> BrandLicenseEventWebhookUrl_BrandLicensesExpanded { get; set; }
             
 
         
