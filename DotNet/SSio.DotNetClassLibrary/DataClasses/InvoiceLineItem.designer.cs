@@ -99,8 +99,69 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public Nullable<decimal> ContractDiscount { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKU")]
+        [RemoteIsCollection]
+        public String LicenseSKU { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKURecurringFee")]
+        [RemoteIsCollection]
+        public Nullable<decimal> LicenseSKURecurringFee { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKUInitialFee")]
+        [RemoteIsCollection]
+        public Nullable<decimal> LicenseSKUInitialFee { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseRenewalPrice")]
+        [RemoteIsCollection]
+        public Nullable<decimal> ProductLicenseRenewalPrice { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseDiscount")]
+        [RemoteIsCollection]
+        public Nullable<decimal> ProductLicenseDiscount { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterTransactions")]
+        [RemoteIsCollection]
+        public String[] MeterTransactions { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKUUnitPrice")]
+        [RemoteIsCollection]
+        public Nullable<decimal> LicenseSKUUnitPrice { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "CreatedTime")]
+        public Nullable<DateTime> CreatedTime { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SKUMeterAdjustments")]
+        [RemoteIsCollection]
+        public String SKUMeterAdjustments { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseName")]
+        [RemoteIsCollection]
+        public String ProductLicenseName { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKUName")]
+        [RemoteIsCollection]
+        public String LicenseSKUName { get; set; }
+    
 
         
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItems_InvoicesesExpanded")]
+        public BindingList<Invoice> InvoiceLineItems_InvoicesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceSubTotal_InvoicesesExpanded")]
+        public BindingList<Invoice> InvoiceSubTotal_InvoicesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterTransactionsesExpanded")]
+        public BindingList<MeterTransaction> MeterTransactionsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "IsUnpaid_MeterTransactionsesExpanded")]
+        public BindingList<MeterTransaction> IsUnpaid_MeterTransactionsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItemProductLicense_MeterTransactionsesExpanded")]
+        public BindingList<MeterTransaction> InvoiceLineItemProductLicense_MeterTransactionsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItems_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> InvoiceLineItems_LicenseSKUsExpanded { get; set; }
+            
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItems_ProductLicensesesExpanded")]
         public BindingList<ProductLicense> InvoiceLineItems_ProductLicensesExpanded { get; set; }
             
@@ -112,12 +173,6 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "StripePaymentUrl_ProductLicensesesExpanded")]
         public BindingList<ProductLicense> StripePaymentUrl_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItems_InvoicesesExpanded")]
-        public BindingList<Invoice> InvoiceLineItems_InvoicesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceSubTotal_InvoicesesExpanded")]
-        public BindingList<Invoice> InvoiceSubTotal_InvoicesExpanded { get; set; }
             
 
         

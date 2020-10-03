@@ -15,7 +15,6 @@ namespace SmartSubs.io.Lib.DataClasses
         {
             this.InitPoco();
         }
-
         public override String ToString()
         {
             return String.Format("InvoiceLineItem: {0}", this.Name);

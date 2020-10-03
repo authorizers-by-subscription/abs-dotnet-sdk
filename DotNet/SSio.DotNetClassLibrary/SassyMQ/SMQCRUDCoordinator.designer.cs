@@ -340,42 +340,6 @@ namespace EffortlessAPI.SSio.SassyMQ
                         this.OnAdminDeleteMicroServiceCandidateReceived(payload, bdea);
                         break;
                     
-                    case "crudcoordinator.crud.licensecoordinator.addproductlicense":
-                        this.OnLicenseCoordinatorAddProductLicenseReceived(payload, bdea);
-                        break;
-                    
-                    case "crudcoordinator.crud.licensecoordinator.getproductlicenses":
-                        this.OnLicenseCoordinatorGetProductLicensesReceived(payload, bdea);
-                        break;
-                    
-                    case "crudcoordinator.crud.licensecoordinator.updateproductlicense":
-                        this.OnLicenseCoordinatorUpdateProductLicenseReceived(payload, bdea);
-                        break;
-                    
-                    case "crudcoordinator.crud.licensecoordinator.deleteproductlicense":
-                        this.OnLicenseCoordinatorDeleteProductLicenseReceived(payload, bdea);
-                        break;
-                    
-                    case "crudcoordinator.crud.ssiouser.getproductlicenses":
-                        this.OnSSioUserGetProductLicensesReceived(payload, bdea);
-                        break;
-                    
-                    case "crudcoordinator.crud.admin.addproductlicense":
-                        this.OnAdminAddProductLicenseReceived(payload, bdea);
-                        break;
-                    
-                    case "crudcoordinator.crud.admin.getproductlicenses":
-                        this.OnAdminGetProductLicensesReceived(payload, bdea);
-                        break;
-                    
-                    case "crudcoordinator.crud.admin.updateproductlicense":
-                        this.OnAdminUpdateProductLicenseReceived(payload, bdea);
-                        break;
-                    
-                    case "crudcoordinator.crud.admin.deleteproductlicense":
-                        this.OnAdminDeleteProductLicenseReceived(payload, bdea);
-                        break;
-                    
                     case "crudcoordinator.crud.licensecoordinator.addlicensedproduct":
                         this.OnLicenseCoordinatorAddLicensedProductReceived(payload, bdea);
                         break;
@@ -874,6 +838,42 @@ namespace EffortlessAPI.SSio.SassyMQ
                     
                     case "crudcoordinator.crud.admin.deletessioversion":
                         this.OnAdminDeleteSSioVersionReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.addproductlicense":
+                        this.OnLicenseCoordinatorAddProductLicenseReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.getproductlicenses":
+                        this.OnLicenseCoordinatorGetProductLicensesReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.updateproductlicense":
+                        this.OnLicenseCoordinatorUpdateProductLicenseReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.deleteproductlicense":
+                        this.OnLicenseCoordinatorDeleteProductLicenseReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.ssiouser.getproductlicenses":
+                        this.OnSSioUserGetProductLicensesReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.addproductlicense":
+                        this.OnAdminAddProductLicenseReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.getproductlicenses":
+                        this.OnAdminGetProductLicensesReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.updateproductlicense":
+                        this.OnAdminUpdateProductLicenseReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.deleteproductlicense":
+                        this.OnAdminDeleteProductLicenseReceived(payload, bdea);
                         break;
                     
                     case "crudcoordinator.crud.licensecoordinator.addproductversion":
@@ -2151,132 +2151,6 @@ namespace EffortlessAPI.SSio.SassyMQ
             {
                 plea.Payload.IsHandled = true;
                 this.AdminDeleteMicroServiceCandidateReceived(this, plea);
-            }
-        }
-
-        /// <summary>
-        /// Responds to: AddProductLicense from LicenseCoordinator
-        /// </summary>
-        public event EventHandler<PayloadEventArgs> LicenseCoordinatorAddProductLicenseReceived;
-        protected virtual void OnLicenseCoordinatorAddProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
-        {
-            var plea = new PayloadEventArgs(payload, bdea);
-            if (!ReferenceEquals(this.LicenseCoordinatorAddProductLicenseReceived, null))
-            {
-                plea.Payload.IsHandled = true;
-                this.LicenseCoordinatorAddProductLicenseReceived(this, plea);
-            }
-        }
-
-        /// <summary>
-        /// Responds to: GetProductLicenses from LicenseCoordinator
-        /// </summary>
-        public event EventHandler<PayloadEventArgs> LicenseCoordinatorGetProductLicensesReceived;
-        protected virtual void OnLicenseCoordinatorGetProductLicensesReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
-        {
-            var plea = new PayloadEventArgs(payload, bdea);
-            if (!ReferenceEquals(this.LicenseCoordinatorGetProductLicensesReceived, null))
-            {
-                plea.Payload.IsHandled = true;
-                this.LicenseCoordinatorGetProductLicensesReceived(this, plea);
-            }
-        }
-
-        /// <summary>
-        /// Responds to: UpdateProductLicense from LicenseCoordinator
-        /// </summary>
-        public event EventHandler<PayloadEventArgs> LicenseCoordinatorUpdateProductLicenseReceived;
-        protected virtual void OnLicenseCoordinatorUpdateProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
-        {
-            var plea = new PayloadEventArgs(payload, bdea);
-            if (!ReferenceEquals(this.LicenseCoordinatorUpdateProductLicenseReceived, null))
-            {
-                plea.Payload.IsHandled = true;
-                this.LicenseCoordinatorUpdateProductLicenseReceived(this, plea);
-            }
-        }
-
-        /// <summary>
-        /// Responds to: DeleteProductLicense from LicenseCoordinator
-        /// </summary>
-        public event EventHandler<PayloadEventArgs> LicenseCoordinatorDeleteProductLicenseReceived;
-        protected virtual void OnLicenseCoordinatorDeleteProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
-        {
-            var plea = new PayloadEventArgs(payload, bdea);
-            if (!ReferenceEquals(this.LicenseCoordinatorDeleteProductLicenseReceived, null))
-            {
-                plea.Payload.IsHandled = true;
-                this.LicenseCoordinatorDeleteProductLicenseReceived(this, plea);
-            }
-        }
-
-        /// <summary>
-        /// Responds to: GetProductLicenses from SSioUser
-        /// </summary>
-        public event EventHandler<PayloadEventArgs> SSioUserGetProductLicensesReceived;
-        protected virtual void OnSSioUserGetProductLicensesReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
-        {
-            var plea = new PayloadEventArgs(payload, bdea);
-            if (!ReferenceEquals(this.SSioUserGetProductLicensesReceived, null))
-            {
-                plea.Payload.IsHandled = true;
-                this.SSioUserGetProductLicensesReceived(this, plea);
-            }
-        }
-
-        /// <summary>
-        /// Responds to: AddProductLicense from Admin
-        /// </summary>
-        public event EventHandler<PayloadEventArgs> AdminAddProductLicenseReceived;
-        protected virtual void OnAdminAddProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
-        {
-            var plea = new PayloadEventArgs(payload, bdea);
-            if (!ReferenceEquals(this.AdminAddProductLicenseReceived, null))
-            {
-                plea.Payload.IsHandled = true;
-                this.AdminAddProductLicenseReceived(this, plea);
-            }
-        }
-
-        /// <summary>
-        /// Responds to: GetProductLicenses from Admin
-        /// </summary>
-        public event EventHandler<PayloadEventArgs> AdminGetProductLicensesReceived;
-        protected virtual void OnAdminGetProductLicensesReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
-        {
-            var plea = new PayloadEventArgs(payload, bdea);
-            if (!ReferenceEquals(this.AdminGetProductLicensesReceived, null))
-            {
-                plea.Payload.IsHandled = true;
-                this.AdminGetProductLicensesReceived(this, plea);
-            }
-        }
-
-        /// <summary>
-        /// Responds to: UpdateProductLicense from Admin
-        /// </summary>
-        public event EventHandler<PayloadEventArgs> AdminUpdateProductLicenseReceived;
-        protected virtual void OnAdminUpdateProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
-        {
-            var plea = new PayloadEventArgs(payload, bdea);
-            if (!ReferenceEquals(this.AdminUpdateProductLicenseReceived, null))
-            {
-                plea.Payload.IsHandled = true;
-                this.AdminUpdateProductLicenseReceived(this, plea);
-            }
-        }
-
-        /// <summary>
-        /// Responds to: DeleteProductLicense from Admin
-        /// </summary>
-        public event EventHandler<PayloadEventArgs> AdminDeleteProductLicenseReceived;
-        protected virtual void OnAdminDeleteProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
-        {
-            var plea = new PayloadEventArgs(payload, bdea);
-            if (!ReferenceEquals(this.AdminDeleteProductLicenseReceived, null))
-            {
-                plea.Payload.IsHandled = true;
-                this.AdminDeleteProductLicenseReceived(this, plea);
             }
         }
 
@@ -4027,6 +3901,132 @@ namespace EffortlessAPI.SSio.SassyMQ
             {
                 plea.Payload.IsHandled = true;
                 this.AdminDeleteSSioVersionReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: AddProductLicense from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorAddProductLicenseReceived;
+        protected virtual void OnLicenseCoordinatorAddProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorAddProductLicenseReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorAddProductLicenseReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: GetProductLicenses from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorGetProductLicensesReceived;
+        protected virtual void OnLicenseCoordinatorGetProductLicensesReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorGetProductLicensesReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorGetProductLicensesReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: UpdateProductLicense from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorUpdateProductLicenseReceived;
+        protected virtual void OnLicenseCoordinatorUpdateProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorUpdateProductLicenseReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorUpdateProductLicenseReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: DeleteProductLicense from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorDeleteProductLicenseReceived;
+        protected virtual void OnLicenseCoordinatorDeleteProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorDeleteProductLicenseReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorDeleteProductLicenseReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: GetProductLicenses from SSioUser
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> SSioUserGetProductLicensesReceived;
+        protected virtual void OnSSioUserGetProductLicensesReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.SSioUserGetProductLicensesReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.SSioUserGetProductLicensesReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: AddProductLicense from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminAddProductLicenseReceived;
+        protected virtual void OnAdminAddProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminAddProductLicenseReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminAddProductLicenseReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: GetProductLicenses from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminGetProductLicensesReceived;
+        protected virtual void OnAdminGetProductLicensesReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminGetProductLicensesReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminGetProductLicensesReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: UpdateProductLicense from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminUpdateProductLicenseReceived;
+        protected virtual void OnAdminUpdateProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminUpdateProductLicenseReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminUpdateProductLicenseReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: DeleteProductLicense from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminDeleteProductLicenseReceived;
+        protected virtual void OnAdminDeleteProductLicenseReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminDeleteProductLicenseReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminDeleteProductLicenseReceived(this, plea);
             }
         }
 

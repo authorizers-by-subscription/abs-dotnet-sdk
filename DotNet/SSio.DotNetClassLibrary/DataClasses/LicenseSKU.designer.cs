@@ -257,34 +257,48 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String NameForBrand { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItems")]
+        [RemoteIsCollection]
+        public String[] InvoiceLineItems { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "UnitsIncluded")]
+        public Nullable<Int32> UnitsIncluded { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ParentSKUUnitPrice")]
+        [RemoteIsCollection]
+        public Nullable<decimal> ParentSKUUnitPrice { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ParentSKUPriceForUnits")]
+        public Nullable<decimal> ParentSKUPriceForUnits { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "UnitPrice")]
+        public Nullable<decimal> UnitPrice { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DiscountedParentSKUUnitPrice")]
+        public Nullable<decimal> DiscountedParentSKUUnitPrice { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Price")]
+        public Nullable<decimal> Price { get; set; }
+    
 
         
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MonthlyFee_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> MonthlyFee_ProductLicensesExpanded { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> InvoiceLineItemsExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Term_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> Term_ProductLicensesExpanded { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKURecurringFee_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> LicenseSKURecurringFee_InvoiceLineItemsExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalFee_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> RenewalFee_ProductLicensesExpanded { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKUInitialFee_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> LicenseSKUInitialFee_InvoiceLineItemsExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKU_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> RenewalSKU_ProductLicensesExpanded { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKUUnitPrice_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> LicenseSKUUnitPrice_InvoiceLineItemsExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ContractTerm_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> ContractTerm_ProductLicensesExpanded { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SKUMeterAdjustments_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> SKUMeterAdjustments_InvoiceLineItemsExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ContractDiscount_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> ContractDiscount_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultRenewalSKULimits_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> DefaultRenewalSKULimits_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKUSKU_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> RenewalSKUSKU_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultSKUMeterAdjustments_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> DefaultSKUMeterAdjustments_ProductLicensesExpanded { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKUName_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> LicenseSKUName_InvoiceLineItemsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BundleSKU_SKUMeterAdjustmentsesExpanded")]
         public BindingList<SKUMeterAdjustment> BundleSKU_SKUMeterAdjustmentsExpanded { get; set; }
@@ -303,6 +317,9 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicense_SKUMeterAdjustmentsesExpanded")]
         public BindingList<SKUMeterAdjustment> BrandLicense_SKUMeterAdjustmentsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseSKUName_SKUMeterAdjustmentsesExpanded")]
+        public BindingList<SKUMeterAdjustment> LicenseSKUName_SKUMeterAdjustmentsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BundleSKU_LicenseMetersesExpanded")]
         public BindingList<LicenseMeter> BundleSKU_LicenseMetersExpanded { get; set; }
@@ -348,6 +365,33 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ParentRecurringFee_LicenseSKUsesExpanded")]
         public BindingList<LicenseSKU> ParentRecurringFee_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ParentSKUUnitPrice_LicenseSKUsesExpanded")]
+        public BindingList<LicenseSKU> ParentSKUUnitPrice_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MonthlyFee_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> MonthlyFee_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ContractTerm_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> ContractTerm_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ContractDiscount_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> ContractDiscount_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalFee_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> RenewalFee_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKU_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> RenewalSKU_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultSKUMeterAdjustments_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> DefaultSKUMeterAdjustments_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKUSKU_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> RenewalSKUSKU_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKUDiscountPercent_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> RenewalSKUDiscountPercent_ProductLicensesExpanded { get; set; }
             
 
         

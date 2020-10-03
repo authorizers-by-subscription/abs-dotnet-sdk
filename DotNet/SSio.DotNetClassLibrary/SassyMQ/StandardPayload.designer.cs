@@ -87,12 +87,6 @@ namespace EffortlessAPI.SSio.SassyMQ
         
         public List<dc.MicroServiceCandidate> MicroServiceCandidates { get; set; }
         
-        public String ProductLicenseId { get; set; }
-        
-        public dc.ProductLicense ProductLicense { get; set; }
-        
-        public List<dc.ProductLicense> ProductLicenses { get; set; }
-        
         public String LicensedProductId { get; set; }
         
         public dc.LicensedProduct LicensedProduct { get; set; }
@@ -170,6 +164,12 @@ namespace EffortlessAPI.SSio.SassyMQ
         public dc.SSioVersion SSioVersion { get; set; }
         
         public List<dc.SSioVersion> SSioVersions { get; set; }
+        
+        public String ProductLicenseId { get; set; }
+        
+        public dc.ProductLicense ProductLicense { get; set; }
+        
+        public List<dc.ProductLicense> ProductLicenses { get; set; }
         
         public String ProductVersionId { get; set; }
         

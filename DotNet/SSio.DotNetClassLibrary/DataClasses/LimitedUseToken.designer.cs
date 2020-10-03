@@ -55,6 +55,9 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicensesesExpanded")]
         public BindingList<ProductLicense> ProductLicensesExpanded { get; set; }
             
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LimitedUseTokens_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> LimitedUseTokens_ProductLicensesExpanded { get; set; }
+            
 
         
         

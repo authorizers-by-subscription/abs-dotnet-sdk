@@ -37,9 +37,9 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Status")]
         public String Status { get; set; }
     
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseGroup")]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicense")]
         [RemoteIsCollection]
-        public String LicenseGroup { get; set; }
+        public String BrandLicense { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensee")]
         [RemoteIsCollection]
@@ -52,29 +52,25 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String[] InvoiceLineItems { get; set; }
     
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanMonthyFee")]
-        [RemoteIsCollection]
-        public Nullable<decimal> PlanMonthyFee { get; set; }
-    
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MonthlyFee")]
         [RemoteIsCollection]
         public Nullable<decimal> MonthlyFee { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ContractTerm")]
+        [RemoteIsCollection]
+        public Nullable<Int32> ContractTerm { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ContractDiscount")]
+        [RemoteIsCollection]
+        public Nullable<decimal> ContractDiscount { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalFee")]
+        [RemoteIsCollection]
+        public Nullable<decimal> RenewalFee { get; set; }
+    
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Term")]
         [RemoteIsCollection]
         public String Term { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanQuarterlyDiscount")]
-        [RemoteIsCollection]
-        public Nullable<decimal> PlanQuarterlyDiscount { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanSemiAnnualDiscount")]
-        [RemoteIsCollection]
-        public Nullable<decimal> PlanSemiAnnualDiscount { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanAnnualDiscount")]
-        [RemoteIsCollection]
-        public Nullable<decimal> PlanAnnualDiscount { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MonthsRenewed")]
         [RemoteIsCollection]
@@ -96,10 +92,6 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensor")]
         [RemoteIsCollection]
         public String Licensor { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicense")]
-        [RemoteIsCollection]
-        public String BrandLicense { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TermDate")]
         public Nullable<DateTime> TermDate { get; set; }
@@ -152,6 +144,10 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ExposuresRemaining")]
         public Nullable<Int32> ExposuresRemaining { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnology")]
+        [RemoteIsCollection]
+        public String SSioTechnology { get; set; }
+    
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseName")]
         [RemoteIsCollection]
         public String BrandLicenseName { get; set; }
@@ -163,10 +159,6 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "StripePaymentUrl")]
         [RemoteIsCollection]
         public String[] StripePaymentUrl { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalFee")]
-        [RemoteIsCollection]
-        public Nullable<decimal> RenewalFee { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKU")]
         [RemoteIsCollection]
@@ -184,17 +176,9 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String DefaultRenewalSKU { get; set; }
     
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ContractTerm")]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultSKUMeterAdjustments")]
         [RemoteIsCollection]
-        public Nullable<Int32> ContractTerm { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ContractDiscount")]
-        [RemoteIsCollection]
-        public Nullable<decimal> ContractDiscount { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultRenewalSKULimits")]
-        [RemoteIsCollection]
-        public String DefaultRenewalSKULimits { get; set; }
+        public String DefaultSKUMeterAdjustments { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MetersInWarning")]
         [RemoteIsCollection]
@@ -211,14 +195,6 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKUSKU")]
         [RemoteIsCollection]
         public String RenewalSKUSKU { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnology")]
-        [RemoteIsCollection]
-        public String SSioTechnology { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultSKUMeterAdjustments")]
-        [RemoteIsCollection]
-        public String DefaultSKUMeterAdjustments { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseDMQueue")]
         [RemoteIsCollection]
@@ -238,6 +214,29 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseEventWebhookUrl")]
         public String LicenseEventWebhookUrl { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKUDiscountPercent")]
+        [RemoteIsCollection]
+        public Nullable<decimal> RenewalSKUDiscountPercent { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TerminationDate")]
+        public Nullable<DateTime> TerminationDate { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LimitedUseTokens")]
+        [RemoteIsCollection]
+        public String[] LimitedUseTokens { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TermLicenseMeter")]
+        [RemoteIsCollection]
+        public String TermLicenseMeter { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TermMeterEndDate")]
+        [RemoteIsCollection]
+        public Nullable<DateTime> TermMeterEndDate { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TermMeterInWarning")]
+        [RemoteIsCollection]
+        public Nullable<Int32> TermMeterInWarning { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SubscriptionRenewalPrice_InvoiceLineItemsesExpanded")]
@@ -255,8 +254,14 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ContractDiscount_InvoiceLineItemsesExpanded")]
         public BindingList<InvoiceLineItem> ContractDiscount_InvoiceLineItemsExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLisences_SSioUsersesExpanded")]
-        public BindingList<SSioUser> ProductLisences_SSioUsersExpanded { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseRenewalPrice_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> ProductLicenseRenewalPrice_InvoiceLineItemsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseDiscount_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> ProductLicenseDiscount_InvoiceLineItemsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseName_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> ProductLicenseName_InvoiceLineItemsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenses_SSioUsersesExpanded")]
         public BindingList<SSioUser> ProductLicenses_SSioUsersExpanded { get; set; }
@@ -266,12 +271,6 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseMetersesExpanded")]
         public BindingList<ProductLicenseMeter> ProductLicenseMetersExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseMeters_ProductLicenseMetersesExpanded")]
-        public BindingList<ProductLicenseMeter> LicenseMeters_ProductLicenseMetersExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultRenewalSKULimits_ProductLicenseMetersesExpanded")]
-        public BindingList<ProductLicenseMeter> DefaultRenewalSKULimits_ProductLicenseMetersExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKU_ProductLicenseMetersesExpanded")]
         public BindingList<ProductLicenseMeter> RenewalSKU_ProductLicenseMetersExpanded { get; set; }
@@ -284,6 +283,9 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultSKUMeterAdjustments_ProductLicenseMetersesExpanded")]
         public BindingList<ProductLicenseMeter> DefaultSKUMeterAdjustments_ProductLicenseMetersExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TermMeterForProductLicense_ProductLicenseMetersesExpanded")]
+        public BindingList<ProductLicenseMeter> TermMeterForProductLicense_ProductLicenseMetersExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenses_BrandLicensesesExpanded")]
         public BindingList<BrandLicense> ProductLicenses_BrandLicensesExpanded { get; set; }

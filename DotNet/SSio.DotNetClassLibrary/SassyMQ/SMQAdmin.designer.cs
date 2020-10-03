@@ -901,114 +901,6 @@ namespace EffortlessAPI.SSio.SassyMQ
         
         
         /// <summary>
-        /// AddProductLicense - 
-        /// </summary>
-        public Task AddProductLicense(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.AddProductLicense(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
-        }
-
-        /// <summary>
-        /// AddProductLicense - 
-        /// </summary>
-        public Task AddProductLicense(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            var payload = this.CreatePayload(content);
-            return this.AddProductLicense(payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-    
-        
-        /// <summary>
-        /// AddProductLicense - 
-        /// </summary>
-        public Task AddProductLicense(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.SendMessage("crudcoordinator.crud.admin.addproductlicense", payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-        
-        
-        /// <summary>
-        /// GetProductLicenses - 
-        /// </summary>
-        public Task GetProductLicenses(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.GetProductLicenses(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
-        }
-
-        /// <summary>
-        /// GetProductLicenses - 
-        /// </summary>
-        public Task GetProductLicenses(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            var payload = this.CreatePayload(content);
-            return this.GetProductLicenses(payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-    
-        
-        /// <summary>
-        /// GetProductLicenses - 
-        /// </summary>
-        public Task GetProductLicenses(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.SendMessage("crudcoordinator.crud.admin.getproductlicenses", payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-        
-        
-        /// <summary>
-        /// UpdateProductLicense - 
-        /// </summary>
-        public Task UpdateProductLicense(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.UpdateProductLicense(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
-        }
-
-        /// <summary>
-        /// UpdateProductLicense - 
-        /// </summary>
-        public Task UpdateProductLicense(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            var payload = this.CreatePayload(content);
-            return this.UpdateProductLicense(payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-    
-        
-        /// <summary>
-        /// UpdateProductLicense - 
-        /// </summary>
-        public Task UpdateProductLicense(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.SendMessage("crudcoordinator.crud.admin.updateproductlicense", payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-        
-        
-        /// <summary>
-        /// DeleteProductLicense - 
-        /// </summary>
-        public Task DeleteProductLicense(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.DeleteProductLicense(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
-        }
-
-        /// <summary>
-        /// DeleteProductLicense - 
-        /// </summary>
-        public Task DeleteProductLicense(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            var payload = this.CreatePayload(content);
-            return this.DeleteProductLicense(payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-    
-        
-        /// <summary>
-        /// DeleteProductLicense - 
-        /// </summary>
-        public Task DeleteProductLicense(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.SendMessage("crudcoordinator.crud.admin.deleteproductlicense", payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-        
-        
-        /// <summary>
         /// AddLicensedProduct - 
         /// </summary>
         public Task AddLicensedProduct(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
@@ -2409,6 +2301,114 @@ namespace EffortlessAPI.SSio.SassyMQ
         public Task DeleteSSioVersion(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
         {
             return this.SendMessage("crudcoordinator.crud.admin.deletessioversion", payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+        
+        
+        /// <summary>
+        /// AddProductLicense - 
+        /// </summary>
+        public Task AddProductLicense(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.AddProductLicense(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
+        }
+
+        /// <summary>
+        /// AddProductLicense - 
+        /// </summary>
+        public Task AddProductLicense(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            var payload = this.CreatePayload(content);
+            return this.AddProductLicense(payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+    
+        
+        /// <summary>
+        /// AddProductLicense - 
+        /// </summary>
+        public Task AddProductLicense(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.SendMessage("crudcoordinator.crud.admin.addproductlicense", payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+        
+        
+        /// <summary>
+        /// GetProductLicenses - 
+        /// </summary>
+        public Task GetProductLicenses(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.GetProductLicenses(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
+        }
+
+        /// <summary>
+        /// GetProductLicenses - 
+        /// </summary>
+        public Task GetProductLicenses(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            var payload = this.CreatePayload(content);
+            return this.GetProductLicenses(payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+    
+        
+        /// <summary>
+        /// GetProductLicenses - 
+        /// </summary>
+        public Task GetProductLicenses(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.SendMessage("crudcoordinator.crud.admin.getproductlicenses", payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+        
+        
+        /// <summary>
+        /// UpdateProductLicense - 
+        /// </summary>
+        public Task UpdateProductLicense(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.UpdateProductLicense(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
+        }
+
+        /// <summary>
+        /// UpdateProductLicense - 
+        /// </summary>
+        public Task UpdateProductLicense(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            var payload = this.CreatePayload(content);
+            return this.UpdateProductLicense(payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+    
+        
+        /// <summary>
+        /// UpdateProductLicense - 
+        /// </summary>
+        public Task UpdateProductLicense(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.SendMessage("crudcoordinator.crud.admin.updateproductlicense", payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+        
+        
+        /// <summary>
+        /// DeleteProductLicense - 
+        /// </summary>
+        public Task DeleteProductLicense(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.DeleteProductLicense(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
+        }
+
+        /// <summary>
+        /// DeleteProductLicense - 
+        /// </summary>
+        public Task DeleteProductLicense(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            var payload = this.CreatePayload(content);
+            return this.DeleteProductLicense(payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+    
+        
+        /// <summary>
+        /// DeleteProductLicense - 
+        /// </summary>
+        public Task DeleteProductLicense(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.SendMessage("crudcoordinator.crud.admin.deleteproductlicense", payload, replyHandler, timeoutHandler, waitTimeout);
         }
         
         

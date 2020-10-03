@@ -253,33 +253,6 @@ namespace EffortlessAPI.SSio.SassyMQ
         
         
         /// <summary>
-        /// GetProductLicenses - 
-        /// </summary>
-        public Task GetProductLicenses(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.GetProductLicenses(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
-        }
-
-        /// <summary>
-        /// GetProductLicenses - 
-        /// </summary>
-        public Task GetProductLicenses(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            var payload = this.CreatePayload(content);
-            return this.GetProductLicenses(payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-    
-        
-        /// <summary>
-        /// GetProductLicenses - 
-        /// </summary>
-        public Task GetProductLicenses(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
-        {
-            return this.SendMessage("crudcoordinator.crud.ssiouser.getproductlicenses", payload, replyHandler, timeoutHandler, waitTimeout);
-        }
-        
-        
-        /// <summary>
         /// AddLicensedProduct - 
         /// </summary>
         public Task AddLicensedProduct(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
@@ -762,6 +735,33 @@ namespace EffortlessAPI.SSio.SassyMQ
         public Task DeleteLicenseSKU(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
         {
             return this.SendMessage("crudcoordinator.crud.ssiouser.deletelicensesku", payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+        
+        
+        /// <summary>
+        /// GetProductLicenses - 
+        /// </summary>
+        public Task GetProductLicenses(PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.GetProductLicenses(this.CreatePayload(), replyHandler, timeoutHandler, waitTimeout);
+        }
+
+        /// <summary>
+        /// GetProductLicenses - 
+        /// </summary>
+        public Task GetProductLicenses(String content, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            var payload = this.CreatePayload(content);
+            return this.GetProductLicenses(payload, replyHandler, timeoutHandler, waitTimeout);
+        }
+    
+        
+        /// <summary>
+        /// GetProductLicenses - 
+        /// </summary>
+        public Task GetProductLicenses(StandardPayload payload, PayloadHandler replyHandler = null, PayloadHandler timeoutHandler = null, int waitTimeout = StandardPayload.DEFAULT_TIMEOUT)
+        {
+            return this.SendMessage("crudcoordinator.crud.ssiouser.getproductlicenses", payload, replyHandler, timeoutHandler, waitTimeout);
         }
         
         

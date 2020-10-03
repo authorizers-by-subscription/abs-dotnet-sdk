@@ -16,6 +16,8 @@ namespace SmartSubs.io.Lib.DataClasses
             this.InitPoco();
         }
 
+        public SKUMeterAdjustment SKUMeterAdjustment { get; set; }
+
         public override String ToString()
         {
             return String.Format("ProductLicenseMeter: {0}", this.Name);

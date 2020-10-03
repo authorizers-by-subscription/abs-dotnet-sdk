@@ -131,10 +131,25 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String ReplacedByMeterTransaction { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItem")]
+        [RemoteIsCollection]
+        public String InvoiceLineItem { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "IsUnpaid")]
+        [RemoteIsCollection]
+        public Nullable<Int32> IsUnpaid { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItemProductLicense")]
+        [RemoteIsCollection]
+        public String InvoiceLineItemProductLicense { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterTransactions_UnitConversionsesExpanded")]
         public BindingList<UnitConversion> MeterTransactions_UnitConversionsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterTransactions_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> MeterTransactions_InvoiceLineItemsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MeterTransactions_SKUMeterAdjustmentsesExpanded")]
         public BindingList<SKUMeterAdjustment> MeterTransactions_SKUMeterAdjustmentsExpanded { get; set; }

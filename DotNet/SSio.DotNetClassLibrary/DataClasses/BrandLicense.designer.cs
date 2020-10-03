@@ -248,54 +248,6 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenses_BrandsesExpanded")]
         public BindingList<Brand> BrandLicenses_BrandsExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseGroup_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> LicenseGroup_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanMonthyFee_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> PlanMonthyFee_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanQuarterlyDiscount_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> PlanQuarterlyDiscount_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanSemiAnnualDiscount_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> PlanSemiAnnualDiscount_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanAnnualDiscount_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> PlanAnnualDiscount_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensor_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> Licensor_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorEmailAddress_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> LicensorEmailAddress_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanName_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> PlanName_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseName_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> BrandLicenseName_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseSKU_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> BrandLicenseSKU_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultRenewalSKU_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> DefaultRenewalSKU_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandName_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> BrandName_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnology_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> SSioTechnology_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorLicenseEvent_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> LicensorLicenseEvent_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseLicenseEventWebhookUrl_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> BrandLicenseLicenseEventWebhookUrl_ProductLicensesExpanded { get; set; }
-            
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseBundleName_LicenseMetersesExpanded")]
         public BindingList<LicenseMeter> LicenseBundleName_LicenseMetersExpanded { get; set; }
             
@@ -415,6 +367,39 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "NameForBrand_LicenseSKUsesExpanded")]
         public BindingList<LicenseSKU> NameForBrand_LicenseSKUsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensor_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> Licensor_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorEmailAddress_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> LicensorEmailAddress_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PlanName_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> PlanName_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnology_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> SSioTechnology_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseName_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> BrandLicenseName_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseSKU_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> BrandLicenseSKU_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultRenewalSKU_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> DefaultRenewalSKU_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandName_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> BrandName_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorLicenseEvent_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> LicensorLicenseEvent_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseLicenseEventWebhookUrl_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> BrandLicenseLicenseEventWebhookUrl_ProductLicensesExpanded { get; set; }
             
 
         

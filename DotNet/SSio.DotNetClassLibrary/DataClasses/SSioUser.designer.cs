@@ -144,6 +144,10 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultLicenseEventWebhookUrl")]
         public String DefaultLicenseEventWebhookUrl { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Invoices 2")]
+        [RemoteIsCollection]
+        public String[] Invoices2 { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensor_BrandsesExpanded")]
@@ -182,12 +186,6 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTOwner_SSioTechnologiesesExpanded")]
         public BindingList<SSioTechnology> SSioTOwner_SSioTechnologiesExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensee_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> Licensee_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseeEmailAddress_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> LicenseeEmailAddress_ProductLicensesExpanded { get; set; }
-            
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensor_LicensedProductsesExpanded")]
         public BindingList<LicensedProduct> Licensor_LicensedProductsExpanded { get; set; }
             
@@ -215,11 +213,23 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseeEmailAddress_InvoicesesExpanded")]
         public BindingList<Invoice> LicenseeEmailAddress_InvoicesExpanded { get; set; }
             
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensor_InvoicesesExpanded")]
+        public BindingList<Invoice> Licensor_InvoicesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorEmailAddress_InvoicesesExpanded")]
+        public BindingList<Invoice> LicensorEmailAddress_InvoicesExpanded { get; set; }
+            
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicensorEmailAddresss_BrandLicensesesExpanded")]
         public BindingList<BrandLicense> LicensorEmailAddresss_BrandLicensesExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensee_ProductUseRequestsesExpanded")]
         public BindingList<ProductUseRequest> Licensee_ProductUseRequestsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensee_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> Licensee_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseeEmailAddress_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> LicenseeEmailAddress_ProductLicensesExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Licensee_MonthlyProductUseRequestsesExpanded")]
         public BindingList<MonthlyProductUseRequest> Licensee_MonthlyProductUseRequestsExpanded { get; set; }

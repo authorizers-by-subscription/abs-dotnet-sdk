@@ -58,6 +58,9 @@ namespace EffortlessAPI.SSio.SassyMQ
         public string EmailAddress { get; set; }
         public string DemoPassword { get; set; }
         public string AirtableWhere { get; set; }
+        public decimal? CustomValue { get; set; }
+        public String CartAction { get; set; }
+
         public void SetActor(SMQActorBase actor) 
         {
             this.__Actor = actor;

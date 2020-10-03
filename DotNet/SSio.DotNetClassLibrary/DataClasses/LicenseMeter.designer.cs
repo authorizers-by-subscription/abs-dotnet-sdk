@@ -201,6 +201,9 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Meter_SKUMeterAdjustmentsesExpanded")]
         public BindingList<SKUMeterAdjustment> Meter_SKUMeterAdjustmentsExpanded { get; set; }
             
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseMeterName_SKUMeterAdjustmentsesExpanded")]
+        public BindingList<SKUMeterAdjustment> LicenseMeterName_SKUMeterAdjustmentsExpanded { get; set; }
+            
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseMetersesExpanded")]
         public BindingList<ProductLicenseMeter> ProductLicenseMetersExpanded { get; set; }
             

@@ -194,17 +194,12 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "WarningPercent")]
         public Nullable<decimal> WarningPercent { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TermMeterForProductLicense")]
+        [RemoteIsCollection]
+        public String TermMeterForProductLicense { get; set; }
+    
 
         
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseMeters_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> ProductLicenseMeters_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MetersInWarning_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> MetersInWarning_ProductLicensesExpanded { get; set; }
-            
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MetersExceeded_ProductLicensesesExpanded")]
-        public BindingList<ProductLicense> MetersExceeded_ProductLicensesExpanded { get; set; }
-            
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseMeters_SKUMeterAdjustmentsesExpanded")]
         public BindingList<SKUMeterAdjustment> ProductLicenseMeters_SKUMeterAdjustmentsExpanded { get; set; }
             
@@ -237,6 +232,27 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseMeterUnitOfMeasurementPlural_MeterTransactionsesExpanded")]
         public BindingList<MeterTransaction> LicenseMeterUnitOfMeasurementPlural_MeterTransactionsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Term_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> Term_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseMeters_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> ProductLicenseMeters_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MetersInWarning_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> MetersInWarning_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MetersExceeded_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> MetersExceeded_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TermLicenseMeter_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> TermLicenseMeter_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TermMeterEndDate_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> TermMeterEndDate_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "TermMeterInWarning_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> TermMeterInWarning_ProductLicensesExpanded { get; set; }
             
 
         
