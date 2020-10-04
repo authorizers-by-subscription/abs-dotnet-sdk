@@ -140,6 +140,38 @@ namespace EffortlessAPI.SSio.SassyMQ
                         this.OnAdminDeleteProductUseStatusReceived(payload, bdea);
                         break;
                     
+                    case "crudcoordinator.crud.licensecoordinator.addpaymentprocessor":
+                        this.OnLicenseCoordinatorAddPaymentProcessorReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.getpaymentprocessors":
+                        this.OnLicenseCoordinatorGetPaymentProcessorsReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.updatepaymentprocessor":
+                        this.OnLicenseCoordinatorUpdatePaymentProcessorReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.licensecoordinator.deletepaymentprocessor":
+                        this.OnLicenseCoordinatorDeletePaymentProcessorReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.addpaymentprocessor":
+                        this.OnAdminAddPaymentProcessorReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.getpaymentprocessors":
+                        this.OnAdminGetPaymentProcessorsReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.updatepaymentprocessor":
+                        this.OnAdminUpdatePaymentProcessorReceived(payload, bdea);
+                        break;
+                    
+                    case "crudcoordinator.crud.admin.deletepaymentprocessor":
+                        this.OnAdminDeletePaymentProcessorReceived(payload, bdea);
+                        break;
+                    
                     case "crudcoordinator.crud.licensecoordinator.addclioption":
                         this.OnLicenseCoordinatorAddCLIOptionReceived(payload, bdea);
                         break;
@@ -1451,6 +1483,118 @@ namespace EffortlessAPI.SSio.SassyMQ
             {
                 plea.Payload.IsHandled = true;
                 this.AdminDeleteProductUseStatusReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: AddPaymentProcessor from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorAddPaymentProcessorReceived;
+        protected virtual void OnLicenseCoordinatorAddPaymentProcessorReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorAddPaymentProcessorReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorAddPaymentProcessorReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: GetPaymentProcessors from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorGetPaymentProcessorsReceived;
+        protected virtual void OnLicenseCoordinatorGetPaymentProcessorsReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorGetPaymentProcessorsReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorGetPaymentProcessorsReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: UpdatePaymentProcessor from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorUpdatePaymentProcessorReceived;
+        protected virtual void OnLicenseCoordinatorUpdatePaymentProcessorReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorUpdatePaymentProcessorReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorUpdatePaymentProcessorReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: DeletePaymentProcessor from LicenseCoordinator
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> LicenseCoordinatorDeletePaymentProcessorReceived;
+        protected virtual void OnLicenseCoordinatorDeletePaymentProcessorReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.LicenseCoordinatorDeletePaymentProcessorReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.LicenseCoordinatorDeletePaymentProcessorReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: AddPaymentProcessor from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminAddPaymentProcessorReceived;
+        protected virtual void OnAdminAddPaymentProcessorReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminAddPaymentProcessorReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminAddPaymentProcessorReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: GetPaymentProcessors from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminGetPaymentProcessorsReceived;
+        protected virtual void OnAdminGetPaymentProcessorsReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminGetPaymentProcessorsReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminGetPaymentProcessorsReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: UpdatePaymentProcessor from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminUpdatePaymentProcessorReceived;
+        protected virtual void OnAdminUpdatePaymentProcessorReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminUpdatePaymentProcessorReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminUpdatePaymentProcessorReceived(this, plea);
+            }
+        }
+
+        /// <summary>
+        /// Responds to: DeletePaymentProcessor from Admin
+        /// </summary>
+        public event EventHandler<PayloadEventArgs> AdminDeletePaymentProcessorReceived;
+        protected virtual void OnAdminDeletePaymentProcessorReceived(StandardPayload payload, BasicDeliverEventArgs bdea)
+        {
+            var plea = new PayloadEventArgs(payload, bdea);
+            if (!ReferenceEquals(this.AdminDeletePaymentProcessorReceived, null))
+            {
+                plea.Payload.IsHandled = true;
+                this.AdminDeletePaymentProcessorReceived(this, plea);
             }
         }
 

@@ -75,20 +75,17 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "OverrideInvoiceDate")]
         public Nullable<DateTime> OverrideInvoiceDate { get; set; }
     
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "StripeInvoiceId")]
-        public String StripeInvoiceId { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorInvoiceId")]
+        public String PaymentProcessorInvoiceId { get; set; }
     
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "StripeStatus")]
-        public String StripeStatus { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaidAt")]
+        public Nullable<DateTime> PaidAt { get; set; }
     
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "StripePaidAt")]
-        public Nullable<DateTime> StripePaidAt { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorMetadata")]
+        public String PaymentProcessorMetadata { get; set; }
     
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "StripeMetadata")]
-        public String StripeMetadata { get; set; }
-    
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "StripePaymentUrl")]
-        public String StripePaymentUrl { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorPaymentUrl")]
+        public String PaymentProcessorPaymentUrl { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "IsUnpaid")]
         public Nullable<Int32> IsUnpaid { get; set; }
@@ -101,6 +98,16 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String LicensorEmailAddress { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentStatus")]
+        public String PaymentStatus { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoicePaidAt")]
+        public Nullable<DateTime> InvoicePaidAt { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorName")]
+        [RemoteIsCollection]
+        public String PaymentProcessorName { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItemsesExpanded")]
@@ -109,17 +116,20 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseeEmailAddress_InvoiceLineItemsesExpanded")]
         public BindingList<InvoiceLineItem> LicenseeEmailAddress_InvoiceLineItemsExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceStripeStatus_InvoiceLineItemsesExpanded")]
-        public BindingList<InvoiceLineItem> InvoiceStripeStatus_InvoiceLineItemsExpanded { get; set; }
-            
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceStatus_InvoiceLineItemsesExpanded")]
         public BindingList<InvoiceLineItem> InvoiceStatus_InvoiceLineItemsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "IsUnpaid_InvoiceLineItemsesExpanded")]
         public BindingList<InvoiceLineItem> IsUnpaid_InvoiceLineItemsExpanded { get; set; }
             
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceStripePaymentUrl_InvoiceLineItemsesExpanded")]
-        public BindingList<InvoiceLineItem> InvoiceStripePaymentUrl_InvoiceLineItemsExpanded { get; set; }
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoicePaymentProcessorPaymentUrl_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> InvoicePaymentProcessorPaymentUrl_InvoiceLineItemsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoicePaymentStatus_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> InvoicePaymentStatus_InvoiceLineItemsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoicePaymentProcessorStatus_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> InvoicePaymentProcessorStatus_InvoiceLineItemsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "Invoices_SSioUsersesExpanded")]
         public BindingList<SSioUser> Invoices_SSioUsersExpanded { get; set; }

@@ -167,7 +167,7 @@ namespace SmartSubs.io.Lib.DataClasses
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "DefaultTermDays")]
         [RemoteIsCollection]
-        public Nullable<Int32> DefaultTermDays { get; set; }
+        public String DefaultTermDays { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnology")]
         [RemoteIsCollection]
@@ -242,6 +242,10 @@ namespace SmartSubs.io.Lib.DataClasses
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseEventWebhookUrl")]
         public String LicenseEventWebhookUrl { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorName")]
+        [RemoteIsCollection]
+        public String PaymentProcessorName { get; set; }
     
 
         
@@ -400,6 +404,9 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "BrandLicenseLicenseEventWebhookUrl_ProductLicensesesExpanded")]
         public BindingList<ProductLicense> BrandLicenseLicenseEventWebhookUrl_ProductLicensesExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorName_ProductLicensesesExpanded")]
+        public BindingList<ProductLicense> PaymentProcessorName_ProductLicensesExpanded { get; set; }
             
 
         

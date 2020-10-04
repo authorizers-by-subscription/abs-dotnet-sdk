@@ -118,6 +118,9 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public String LicenseMeterName { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "CreatedTime")]
+        public Nullable<DateTime> CreatedTime { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SKULimit_ProductLicenseMetersesExpanded")]

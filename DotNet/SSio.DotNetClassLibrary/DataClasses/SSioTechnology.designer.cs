@@ -70,6 +70,10 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioPercent")]
         public Nullable<decimal> SSioPercent { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessor")]
+        [RemoteIsCollection]
+        public String PaymentProcessor { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorPercent_BrandsesExpanded")]
@@ -92,6 +96,12 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnologyName_BrandsesExpanded")]
         public BindingList<Brand> SSioTechnologyName_BrandsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnologyPaymentProcessor_BrandsesExpanded")]
+        public BindingList<Brand> SSioTechnologyPaymentProcessor_BrandsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnologies_PaymentProcessorsesExpanded")]
+        public BindingList<PaymentProcessor> SSioTechnologies_PaymentProcessorsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SSioTechnologies_SSioUsersesExpanded")]
         public BindingList<SSioUser> SSioTechnologies_SSioUsersExpanded { get; set; }

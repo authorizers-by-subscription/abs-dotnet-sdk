@@ -101,7 +101,7 @@ namespace SmartSubs.io.Lib.DataClasses
         public Nullable<Int32> LimitValue { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "AdjustsLimit")]
-        public Nullable<Boolean> AdjustsLimit { get; set; }
+        public Nullable<Int32> AdjustsLimit { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "UnitConversion")]
         [RemoteIsCollection]
@@ -142,6 +142,9 @@ namespace SmartSubs.io.Lib.DataClasses
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "InvoiceLineItemProductLicense")]
         [RemoteIsCollection]
         public String InvoiceLineItemProductLicense { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "IncompleteMeterAdjustment")]
+        public Nullable<Int32> IncompleteMeterAdjustment { get; set; }
     
 
         

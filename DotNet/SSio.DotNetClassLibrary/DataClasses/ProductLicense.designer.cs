@@ -73,7 +73,6 @@ namespace SmartSubs.io.Lib.DataClasses
         public String Term { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "MonthsRenewed")]
-        [RemoteIsCollection]
         public Nullable<Int32> MonthsRenewed { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaidThroughDate")]
@@ -156,9 +155,9 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public Nullable<Int32> UnpaidInvoiceCount { get; set; }
     
-        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "StripePaymentUrl")]
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorPaymentUrl")]
         [RemoteIsCollection]
-        public String[] StripePaymentUrl { get; set; }
+        public String[] PaymentProcessorPaymentUrl { get; set; }
     
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "RenewalSKU")]
         [RemoteIsCollection]
@@ -237,6 +236,16 @@ namespace SmartSubs.io.Lib.DataClasses
         [RemoteIsCollection]
         public Nullable<Int32> TermMeterInWarning { get; set; }
     
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "AutoNumber")]
+        public String AutoNumber { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "LicenseNumber")]
+        public Nullable<Int32> LicenseNumber { get; set; }
+    
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorName")]
+        [RemoteIsCollection]
+        public String PaymentProcessorName { get; set; }
+    
 
         
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "SubscriptionRenewalPrice_InvoiceLineItemsesExpanded")]
@@ -262,6 +271,9 @@ namespace SmartSubs.io.Lib.DataClasses
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenseName_InvoiceLineItemsesExpanded")]
         public BindingList<InvoiceLineItem> ProductLicenseName_InvoiceLineItemsExpanded { get; set; }
+            
+        [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "PaymentProcessorName_InvoiceLineItemsesExpanded")]
+        public BindingList<InvoiceLineItem> PaymentProcessorName_InvoiceLineItemsExpanded { get; set; }
             
         [JsonProperty(DefaultValueHandling = DefaultValueHandling.IgnoreAndPopulate, PropertyName = "ProductLicenses_SSioUsersesExpanded")]
         public BindingList<SSioUser> ProductLicenses_SSioUsersExpanded { get; set; }

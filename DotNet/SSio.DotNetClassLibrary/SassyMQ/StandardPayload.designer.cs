@@ -37,7 +37,7 @@ namespace EffortlessAPI.SSio.SassyMQ
             this.Content = content;
         }
 
-        // 27 odxml properties
+        // 28 odxml properties
         
         public String BrandId { get; set; }
         
@@ -50,6 +50,12 @@ namespace EffortlessAPI.SSio.SassyMQ
         public dc.ProductUseStatus ProductUseStatus { get; set; }
         
         public List<dc.ProductUseStatus> ProductUseStatuses { get; set; }
+        
+        public String PaymentProcessorId { get; set; }
+        
+        public dc.PaymentProcessor PaymentProcessor { get; set; }
+        
+        public List<dc.PaymentProcessor> PaymentProcessors { get; set; }
         
         public String CLIOptionId { get; set; }
         
